@@ -1,0 +1,36 @@
+package com.agoni.blog.model.dto;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+import com.agoni.blog.model.dto.base.OutputConverter;
+import com.agoni.blog.model.entity.Menu;
+
+/**
+ * Menu output dto.
+ *
+ * @author johnniang
+ * @author ryanwang
+ * @date 4/3/19
+ */
+@Data
+@EqualsAndHashCode
+@ToString
+public class MenuDTO implements OutputConverter<MenuDTO, Menu> {
+
+    private Integer id;
+
+    private String name;
+
+    private String url;
+
+    private Integer priority;
+
+    private String target;
+
+    private String icon;
+
+    private Integer parentId;
+
+    private String team;
+}
